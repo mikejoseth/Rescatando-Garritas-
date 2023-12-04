@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crea tu usuario</title>
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+        crossorigin="anonymous" />
+    <style type="text/css">
+        /*=====================================
+        reset estilos
+        no es necesario que copies esto
+        =====================================*/
+        html {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+        line-height: 1.4;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    body {
+        color: #404040;
+        font-family: "Arial", Segoe UI, Tahoma, sans-serifl, Helvetica Neue, Helvetica;
+    }
+
+    /*=====================================
+    estilos de la utilidad
+    Copiar esto
+    =====================================*/
+    .seccion-perfil-usuario .perfil-usuario-body,
+    .seccion-perfil-usuario {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .seccion-perfil-usuario .perfil-usuario-header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background: linear-gradient(#B873FF, transparent);
+        margin-bottom: 1.25rem;
+    }
+
+    .seccion-perfil-usuario .perfil-usuario-portada {
+        display: block;
+        position: relative;
+        width: 90%;
+        height: 17rem;
+        background-image: linear-gradient(45deg, #BC3CFF, #317FFF);
+        border-radius: 0 0 20px 20px;
+    }
+
+    .seccion-perfil-usuario .perfil-usuario-portada .boton-portada {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        border: 0;
+        border-radius: 8px;
+        padding: 12px 25px;
+        background-color: rgba(0, 0, 0, .5);
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .seccion-perfil-usuario .perfil-usuario-portada .boton-portada i {
+        margin-right: 1rem;
+    }
+
+    .seccion-perfil-usuario .perfil-usuario-avatar {
+        display: flex;
+        width: 180px;
+        height: 180px;
+        align-items: center;
+        justify-content: center;
+        border: 7px solid #FFFFFF;
+        background-color: #DFE5F2;
+        border-radius: 50%;
+        box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+        position: absolute;
+        bottom: -40px;
+        left: calc(50% - 90px);
+        z-index: 1;
+    }
+
+    .seccion-perfil-usuario .perfil-usuario-avatar img {
+        width: 100%;
+        position: relative;
+        border-radius: 50%;
+    }
+
+    .seccion-perfil-usuario .perfil-usuario-avatar .boton-avatar {
+        position: absolute;
+        left: -2px;
+        top: -2px;
+        border: 0;
+        background-color: #fff;
+        box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .seccion-perfil-usuario .perfil-usuario-body {
+        width: 70%;
+        position: relative;
+        max-width: 750px;
+    }
+
+    .seccion-perfil-usuario .perfil-usuario-body .titulo {
+        display: block;
+        width: 100%;
+        font-size: 1.75em;
+        margin-bottom: 0.5rem;
+    }
+
+    .seccion-perfil-usuario .perfil-usuario-body .texto {
+        color: #848484;
+        font-size: 0.95em;
+    }
+
+    .seccion-perfil-usuario .perfil-usuario-footer,
+    .seccion-perfil-usuario .perfil-usuario-bio {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1.5rem 2rem;
+        box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+        background-color: #fff;
+        border-radius: 15px;
+        width: 100%;
+    }
+
+    .seccion-perfil-usuario .perfil-usuario-bio {
+        margin-bottom: 1.25rem;
+        text-align: center;
+    }
+
+    .seccion-perfil-usuario .lista-datos {
+        width: 50%;
+        list-style: none;
+    }
+
+    .seccion-perfil-usuario .lista-datos li {
+        padding: 5px 0;
+    }
+
+    .seccion-perfil-usuario .lista-datos li>.icono {
+        margin-right: 1rem;
+        font-size: 1.2rem;
+        vertical-align: middle;
+    }
+
+    .seccion-perfil-usuario .redes-sociales {
+        position: absolute;
+        right: calc(0px - 50px - 1rem);
+        top: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .seccion-perfil-usuario .redes-sociales .boton-redes {
+        border: 0;
+        background-color: #fff;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        color: #fff;
+        box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+        font-size: 1.3rem;
+    }
+
+    .seccion-perfil-usuario .redes-sociales .boton-redes+.boton-redes {
+        margin-top: .5rem;
+    }
+
+    .seccion-perfil-usuario .boton-redes.facebook {
+        background-color: #5955FF;
+    }
+
+    .seccion-perfil-usuario .boton-redes.twitter {
+        background-color: #35E1BF;
+    }
+
+    .seccion-perfil-usuario .boton-redes.instagram {
+        background: linear-gradient(45deg, #FF2DFD, #40A7FF);
+    }
+
+    /* adactacion a dispositivos */
+    @media (max-width: 750px) {
+        .seccion-perfil-usuario .lista-datos {
+            width: 100%;
+        }
+
+        .seccion-perfil-usuario .perfil-usuario-portada,
+        .seccion-perfil-usuario .perfil-usuario-body {
+            width: 95%;
+        }
+
+        .seccion-perfil-usuario .redes-sociales {
+            position: relative;
+            flex-direction: row;
+            width: 100%;
+            left: 0;
+            text-align: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .seccion-perfil-usuario .redes-sociales .boton-redes+.boton-redes {
+            margin-left: 1rem;
+            margin-top: 0;
+        }
+    }
+
+    .actualizar-informacion button {
+        padding: 10px 20px;
+        font-size: 1em;
+        background-color: #B873FF; /* Cambia el color a morado */
+        color: #fff; /* Cambia el color del texto a blanco */
+        border: 1px solid #9057A9; /* Añade un borde morado más oscuro */
+        border-radius: 10px; /* Bordes redondeados */
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s; /* Agrega transición para una animación suave */
+        margin-left: 20%; /* Añade un margen izquierdo del 20% */
+        transform: translateX(82%); /* Mueve el botón un 20% a la derecha */
+    }
+
+    .actualizar-informacion button:hover {
+        background-color: #9057A9; /* Cambia el color al pasar el ratón */
+        color: #fff; /* Cambia el color del texto al pasar el ratón */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Agrega sombra al pasar el ratón */
+        transform: translateX(22%); /* Mueve un poco más cuando se pasa el ratón */
+    }
+    </style>
+  
+
+</head>
+
+<body>
+   
+    <section class="seccion-perfil-usuario">
+        <div class="perfil-usuario-header">
+            <div class="perfil-usuario-portada">
+                <div class="perfil-usuario-avatar">
+                    <img src="http://localhost/multimedia/relleno/img-c9.png" alt="img-avatar">
+                    <input type="file" id="input-avatar" accept="image/*" style="display: none;">
+                    <label for="input-avatar" class="boton-avatar">
+                        <i class="far fa-image"></i>
+                    </label>
+                </div>
+                <input type="file" id="input-fondo" accept="image/*" style="display: none;" onchange="cambiarFondo(this)">
+<label for="input-fondo" class="boton-portada">
+    <i class="far fa-image"></i> Cambiar fondo
+</label>
+
+<script>
+    function cambiarFondo(input) {
+        var file = input.files[0];
+
+        if (file) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                var portadaImage = document.querySelector('.perfil-usuario-portada');
+                portadaImage.style.backgroundImage = 'url(' + e.target.result + ')';
+            };
+
+            reader.readAsDataURL(file);
+        }
+    }
+</script>
+
+<style type="text/css">
+    /* ... (otras reglas de estilo) ... */
+
+    .seccion-perfil-usuario .perfil-usuario-portada {
+        /* ... (otras reglas de estilo) ... */
+        background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el contenedor */
+    }
+
+    /* ... (otras reglas de estilo) ... */
+</style>
+
+            </div>
+        </div>
+        <div class="perfil-usuario-body">
+            <div class="perfil-usuario-bio">
+                <h3 class="titulo">Mike Joseth Esteban</h3>
+                <p class="texto">Rescatando garritas te permite perzonalizar tu perdin de la forma que quieras añade las imagenes que te representen de la forma que quieras.</p>
+            </div>
+            <div class="perfil-usuario-footer">
+                <ul class="lista-datos">
+                    <li><i class="icono fas fa-map-signs"></i> Direccion de usuario:</li>
+                    <li>
+                        <input type="text" id="direccionUsuario" placeholder="Ingrese la dirección">
+                    </li>
+                    <li><i class="icono fas fa-phone-alt"></i> Telefono:</li>
+                    <li>
+                        <input type="text" id="direccionUsuario" placeholder="Ingresa tu telofono">
+                    </li>
+                    <li><i class="icono fas fa-briefcase"></i> Fecha de nacimiento.</li>
+                    <li>
+                        <input type="text" id="direccionUsuario" placeholder="donde trabajas ">
+                    </li>
+                    <li><i class="icono fas fa-building"></i> Nombres Completos</li>
+                    <li>
+                        <input type="text" id="direccionUsuario" placeholder="Ingresa tus nombres">
+                    </li>
+                </ul>
+                <ul class="lista-datos">
+                    <li><i class="icono fas fa-map-marker-alt"></i> Ubicacion.</li>
+                    <li>
+                        <input type="text" id="direccionUsuario" placeholder="Ingresa tu  ubicacion ">
+                    </li>
+                    <li><i class="icono fas fa-calendar-alt"></i> Fecha nacimiento.</li>
+                    <li>
+                        <input type="text" id="direccionUsuario" placeholder="Ingresa tu cumpleaños">
+                    </li>
+                    <li><i class="icono fas fa-user-check"></i> Registro.</li>
+                    <li>
+                        <input type="text" id="direccionUsuario" placeholder="Ingrese tu N de usuario ">
+                    </li>
+                    <li><i class="icono fas fa-share-alt"></i> Redes sociales.</li>
+                    <li>
+                        <input type="text" id="direccionUsuario" placeholder="Ingrese una red que quieras ">
+                    </li>
+                </ul>
+                <div class="actualizar-informacion">
+                    <button id="btnActualizarInformacion">Actualizar Información</button>
+                </div>
+            </div>
+            <div class="redes-sociales">
+                <a href="" class="boton-redes facebook fab fa-facebook-f"><i class="icon-facebook"></i></a>
+                <a href="" class="boton-redes twitter fab fa-twitter"><i class="icon-twitter"></i></a>
+                <a href="" class="boton-redes instagram fab fa-instagram"><i class="icon-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+    <!--====  End of html  ====-->
+
+    <!--=============================
+    redes sociales fijadas en pantalla
+    No es necesario que copies esto!
+    ==============================-->
+    <style>
+
+        
+        .mensaje a {
+            color: inherit;
+            margin-right: .5rem;
+            display: inline-block;
+        }
+
+        .mensaje a:hover {
+            color: #309B76;
+            transform: scale(1.4)
+        }
+        /* Estilos para el botón de actualización */
+/* Estilos para el botón de actualización */
+/* Estilos para el botón de actualización */
+button {
+    padding: 10px 20px; /* Ajustar el espaciado interno para hacer el botón un poco más grande */
+    font-size: 16px; /* Tamaño de fuente del botón */
+    background-color: #a775d6; /* Color morado (puedes cambiarlo) */
+    color: #fff; /* Color del texto del botón (puedes cambiarlo) */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Borde redondeado */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    transition: transform 0.3s ease; /* Agregar transición para suavizar el efecto */
+}
+
+/* Estilos adicionales para resaltar el botón al pasar el ratón sobre él */
+button:hover {
+    background-color: #6a1c9d; /* Cambiar el color de fondo al pasar el ratón */
+    transform: translateY(-9%); /* Elevar el botón un 5% al pasar el ratón */
+}
+
+
+
+    </style>
+    <div class="mis-redes" style="display: block;position: fixed;bottom: 1rem;left: 1rem; opacity: 0.5; z-index: 1000;">
+        <p style="font-size: .75rem;">Rescatando Garritas</p>
+        <div>
+            <a target="_blank" href="https://www.facebook.com/ApockGraficos"><i class="fab fa-facebook-square"></i></a>
+            <a target="_blank" href="https://twitter.com/ApockGraficos"><i class="fab fa-twitter"></i></a>
+            <a target="_blank" href="https://www.instagram.com/ApockGraficos"><i class="fab fa-instagram"></i></a>
+            <a target="_blank" href="https://www.youtube.com/channel/UC15DkMZQ80aoW_Rqk4n2T_w"><i
+                    class="fab fa-youtube"></i></a>
+        </div>
+
+    </div>
+
+  
+    
+    
+    
+    <!--====  End of tarjeta  ====-->
+
+    <script>
+        document.getElementById('input-avatar').addEventListener('change', function (event) {
+            var input = event.target;
+            var file = input.files[0];
+
+            if (file) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    var avatarImage = document.querySelector('.perfil-usuario-avatar img');
+                    avatarImage.src = e.target.result;
+                };
+
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Seleccionar elementos necesarios
+        var tituloUsuario = document.querySelector('.perfil-usuario-bio .titulo');
+        var inputNombreUsuario = document.createElement('input');
+        var btnActualizarNombre = document.createElement('button');
+
+        // Configurar el input
+        inputNombreUsuario.type = 'text';
+        inputNombreUsuario.value = tituloUsuario.innerText;
+
+        // Configurar el botón de actualización
+        btnActualizarNombre.innerText = 'Actualizar Nombre';
+        btnActualizarNombre.addEventListener('click', function () {
+            tituloUsuario.innerText = inputNombreUsuario.value;
+        });
+
+        // Agregar el input y el botón a la página
+        tituloUsuario.appendChild(inputNombreUsuario);
+        tituloUsuario.appendChild(btnActualizarNombre);
+    });
+</script>
+
+<script>
+    document.getElementById('btnActualizarInformacion').addEventListener('click', function () {
+        // Aquí puedes agregar el código para actualizar la información.
+        alert('Información actualizada correctamente'); // Ejemplo: muestra una alerta, puedes reemplazar esto con tu lógica de actualización.
+    });
+</script>
+
+
+</body>
+
+</html>
+

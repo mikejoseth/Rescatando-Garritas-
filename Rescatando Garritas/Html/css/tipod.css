@@ -1,0 +1,86 @@
+.container {
+    max-width: 400px;
+    margin: 20px auto; /* Agrega margen superior y centraliza horizontalmente */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.container form {
+    padding: 20px; /* Agrega márgenes internos al formulario */
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    text-align: center;
+    color: transparent;
+    background-image: linear-gradient(45deg, #00FF00, #000);
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: lights 3s linear infinite;
+}
+
+@keyframes lights {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 0; }
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea,
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s, transform 0.3s;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente para campos */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #007BFF;
+    transform: scale(1.02);
+}
+
+button {
+    grid-column: span 2;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}

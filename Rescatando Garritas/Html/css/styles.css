@@ -1,0 +1,219 @@
+/* Estilos generales */
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('img/fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+/* Estilos para el título */
+/* Estilos para el título */
+.header h1 {
+    font-family: 'TuNuevoTipoDeLetra', Arial, sans-serif; /* Cambiar el tipo de letra */
+    text-align: center; /* Centrar el texto */
+    font-size: 48px; /* Tamaño de fuente */
+
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00ffcc, 0 0 50px #00ffcc, 0 0 60px #00ffcc, 0 0 70px #00ffcc, 0 0 80px #00ffcc, 0 0 90px #00ffcc; /* Efecto de sombra de neón en verde limón */
+    animation: neon 1.5s infinite alternate; /* Animación para parpadear la sombra de neón */
+}
+
+@keyframes neon {
+    from {
+        text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00ffcc, 0 0 50px #00ffcc, 0 0 60px #00ffcc, 0 0 70px #00ffcc, 0 0 80px #00ffcc, 0 0 90px #00ffcc; /* Opacidad inicial (mitad) */
+    }
+    to {
+        text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00ffcc, 0 0 50px #00ffcc, 0 0 60px #00ffcc, 0 0 70px #00ffcc, 0 0 80px #00ffcc, 0 0 90px #00ffcc; /* Opacidad final (completa) */
+    }
+}
+
+.header {
+    padding: 20px 0;
+    text-align: center;
+    letter-spacing: 5px;
+    animation: neon 1.5s infinite alternate;
+}
+
+@keyframes neon {
+    from {
+        opacity: 0.5; /* Opacidad inicial (mitad) */
+    }
+    to {
+        opacity: 1; /* Opacidad final (completa) */
+    }
+}
+.arrow-button-container {
+    position: relative;
+}
+
+.arrow-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #f72d7a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.arrow-button:hover {
+    background-color: #fff;
+    color: #f72d7a;
+}
+
+
+/* Estilos para el contenedor principal */
+.container {
+    max-width: 800px; /* Establece un ancho máximo para el contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Estilos para los contenedores de texto e imágenes */
+.animal {
+    background-color: rgba(255, 255, 255, 0); /* Fondo completamente transparente */
+    border: 1px solid #00ffcc; /* Borde color neon */
+    color: white; /* Color de texto blanco */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    overflow: hidden; /* Evita que las imágenes se desborden */
+    position: relative; /* Añade posicionamiento relativo para el botón */
+    display: flex;
+    flex-direction: column; /* Cambio la dirección del flujo de elementos a columna */
+    justify-content: space-between; /* Espaciado uniforme entre elementos */
+    align-items: flex-start; /* Alinea el contenido en la parte superior izquierda */
+}
+
+
+
+/* Estilos para las imágenes */
+
+/* Estilos para las imágenes */
+/* Estilos para las imágenes */
+.animal img {
+    max-width: 100%;
+    height: auto;
+    max-height: 150px;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out; /* Agregar transición a width y height */
+    object-fit: cover; /* Hace que la imagen se ajuste proporcionalmente y se muestre completa de borde a borde */
+    border-radius: 10px; /* Bordes redondeados */
+    transform-style: preserve-3d; /* Preserva el efecto 3D */
+    transform: translateZ(0); /* Añade una capa 3D para el efecto */
+}
+
+/* Agregar efecto de zoom al pasar el mouse */
+.animal:hover img {
+    width: 40%; /* Aumenta el ancho al 110% */
+    height: auto; /* Mantén la proporción original de la imagen */
+    transform: scale(1.1) translateZ(0); /* Escala y agrega perspectiva */
+    box-shadow: 0 0 20px rgba(247, 45, 122, 0.7); /* Sombra 3D */
+}
+
+
+
+/* Agregar animación de zoom al pasar el mouse */
+/* Agregar animación de zoom al pasar el mouse */
+.animal:hover {
+    transform: scale(1.1);
+    background-color: rgba(220, 210, 223, 0.7); /* Cambio de color de fondo semi borroso al pasar el mouse */
+}
+
+/* Estilos para el título */
+.animal h2 {
+    font-family: 'TuNuevoTipoDeLetra', Arial, sans-serif; /* Cambiar el tipo de letra */
+    text-align: center; /* Centrar el texto */
+    font-size: 24px; /* Tamaño de fuente */
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00ffcc, 0 0 50px #00ffcc; /* Efecto de texto de neón */
+    transition: transform 0.3s ease-in-out; /* Agregar transición a la transformación */
+}
+
+/* Agregar animación al pasar el mouse */
+.animal:hover h2 {
+    transform: scale(1.1); /* Cambiar el tamaño al pasar el mouse */
+    text-shadow: 0 0 10px#f72d7a; ; /* Cambiar el efecto de neón al pasar el mouse */
+}
+
+
+/* Estilos para el botón Adoptar */
+
+/* Estilos para el botón Adoptar */
+.animal button {
+    margin-top: auto; /* Mueve el botón hacia la esquina opuesta (abajo) */
+    align-self: flex-end; /* Alinea el botón en la esquina inferior derecha */
+    padding: 10px 20px; /* Añade espacio alrededor del botón */
+    position: relative; /* Añade posicionamiento relativo */
+    z-index: 1; /* Coloca el botón por encima de la imagen */
+}
+
+.neon-button {
+    background-color: #f72d7a; 
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* Efecto neon cuando el mouse pasa por encima */
+.neon-button:hover {
+    background-color: #f72d7a; 
+    color: #fff;
+    box-shadow: 0 0 10px#f72d7a;
+}
+
+/* ... Resto de tus estilos ... */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('img/fondo.jpg');
+    background-size: cover; /* La imagen de fondo se ajustará de forma proporcional a la pantalla */
+    background-repeat: no-repeat;
+    background-position: center center; /* Centra la imagen en horizontal y vertical */
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Estilos para el contenedor del botón */
+.arrow-button-container {
+    position: relative;
+}
+
+/* Estilos para el botón de flecha */
+.arrow-button {
+    position: absolute;
+    top: 10px; /* Ajusta la distancia desde la parte superior */
+    left: 10px; /* Ajusta la distancia desde la izquierda */
+    background-color: #f72d7a; /* Color del botón */
+    color: white; /* Color del texto del botón */
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 50%; /* Hace que el botón sea circular */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Cambia el color al pasar el mouse */
+.arrow-button:hover {
+    background-color: #fff; /* Cambia el color de fondo */
+    color: #f72d7a; /* Cambia el color del texto */
+}
+

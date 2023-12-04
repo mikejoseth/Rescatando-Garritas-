@@ -1,0 +1,71 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    background: rgb(0, 0, 0);
+    width: 100vw;
+    height: 100vh;
+}
+
+h1 {
+color: #d4d2e5; /* Color neón inicial */
+font-family: 'Orbitron', sans-serif;
+font-size: 36px;
+text-align: center;
+animation: neonBlink 2s linear infinite; /* Animación parpadeante */
+}
+
+@keyframes neonBlink {
+0%, 100% {
+color: #d4d2e5; /* Color neón inicial */
+}
+50% {
+color: #944128; /* Primer color de parpadeo */
+}
+75% {
+color: #5a5919; /* Segundo color de parpadeo */
+}
+90% {
+color: #582617; /* Tercer color de parpadeo */
+}
+}
+
+
+body {
+    font-family: 'Garamond', 'Times New Roman', serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    max-width: 90%;
+    padding: 30px;
+    background-color: rgba(39, 36, 36, 0.8);
+    box-shadow: 0 0 10px rgba(187, 177, 177, 0.2);
+    border-radius: 10px;
+    transition: box-shadow 0.3s; /* Agrega una transición a la propiedad box-shadow */
+}
+
+
+
+button:hover {
+    background-color: #4d55cc; /* Color neón al hacer hover */
+    color: rgb(214, 209, 209); /* Color de texto al hacer hover */
+}
+
+/* Aplicar bordes redondos a la imagen */
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 50px; /* Bordes redondos */
+}

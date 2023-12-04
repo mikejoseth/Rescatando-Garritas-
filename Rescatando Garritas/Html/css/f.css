@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/aqui.jpg);
+  background-size: cover;
+}
+
+.header h1 {
+  margin-top: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.container {
+  width: 700px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  animation: glowing 2s infinite; /* Agrega la animación al contenedor */
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 10px 0px rgba(34, 171, 235, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 20px 10px rgba(34, 171, 235, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 10px 0px rgba(34, 171, 235, 0.8);
+  }
+}
+
+.survey-form {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/aqui.jpg);
+  background-size: cover;
+  background-position: center center;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 15px 0px rgba(34, 171, 235, 0.8);
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: flex;
+  position: relative;
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.form-group textarea,
+input {
+  margin-left: 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border-style: none;
+}
+
+.form-group select {
+  width: 90%;
+  margin-left: 20px;
+  font-size: 16px;
+  padding: 10px 10px;
+  border-radius: 10px;
+  border-style: none;
+  margin-bottom: 10px;
+}
+
+.inputLabel {
+  width: 90%;
+  margin-left: 20px;
+  font-size: 14px;
+  padding: 12px 15px;
+  border-style: none;
+  border-radius: 10px;
+}
+
+.checkbox {
+  font-size: 16px;
+  margin-left: 12px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.submitBtn {
+  width: 90%;
+  font-size: 16px;
+  padding: 12px 15px;
+  border-style: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: rgb(23, 40, 189);
+  color: white;
+}
+
+.textbox {
+  width: 90%;
+  padding: 10px;
+}
+
+.credit {
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Donación</title>
+    <link rel="stylesheet" href="css/tipod.css">
+</head>
+<body>
+    <div class="container">
+       
+        <h2>Formulario de Donación</h2>
+        <i class="fas fa-cat fa-3x" style="margin-bottom: 20px;"></i>
+        <form action="https://formsubmit.co/Rescatandogarritas666@gmail.com" method="POST">
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+            
+            <label for="insumo">Tipo de Insumo:</label>
+            <select id="insumo" name="insumo" required>
+                <option value="Alimento">Alimento para Gatos</option>
+                <option value="Arena">Arena para Gatos</option>
+                <option value="Comedero">Comedero para Gatos</option>
+                <option value="Otros">Otros (Especificar en Comentarios)</option>
+            </select>
+            
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" min="1" required>
+            
+            <label for="comentarios">Comentarios (opcional):</label>
+            <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+            
+            <label for="anonimo">Donar de forma anónima:</label>
+            <input type="checkbox" id="anonimo" name="anonimo" value="Si">
+            
+            <button type="submit">Enviar Donación</button>
+            <input type="hidden" name="_next" value="gracias.html"> 
+            <input type="hidden" name="_captcha" value="false">
+        </form>
+    </div>
+    <style>
+ 
+
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/soli.jpg'); /* Reemplaza 'tu-imagen-de-fondo.jpg' con la URL de tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+
+
+    </style>
+</body>
+</html>

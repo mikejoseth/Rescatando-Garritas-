@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/nuevo\ f.jpg'); /* Ruta de tu imagen de fondo */
+    background-size: cover; /* Ajusta la imagen al tamaño de la pantalla */
+    background-attachment: fixed; /* Fija la imagen de fondo en su lugar */
+}
+
+/* Resto de los estilos que has definido anteriormente */
+/* ... */
+
+/* Estilos para el encabezado */
+/* Estilo del encabezado */
+header {
+    background-color: transparent; /* Hace que el fondo sea transparente */
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Estilo del título con luces de neón */
+/* Estilo del título con luces de neón */
+.neon-text {
+    font-size: 40px; /* Tamaño de fuente */
+    color: rgb(230, 221, 221); /* Color de texto inicial (rojo) */
+    text-shadow: 0 0 10px rgb(231, 222, 222), 0 0 20px rgb(79, 6, 128), 0 0 30px #f00, 0 0 40px #f00, 0 0 50px #f00, 0 0 60px #f00; /* Efecto de luces de neón con sombras rojas */
+    animation: neon 1.5s infinite alternate; /* Animación para el efecto de luces de neón y parpadeo */
+}
+
+@keyframes neon {
+    0% {
+        color: rgb(221, 211, 211); /* Color de texto rojo en el inicio de la animación */
+        text-shadow: 0 0 10px #f00, 0 0 20px rgb(48, 7, 87), 0 0 30px rgb(64, 15, 129), 0 0 40px #f00, 0 0 50px #f00, 0 0 60px #f00; /* Efecto de luces de neón con sombras rojas */
+    }
+    100% {
+        color: #4b0969bb; /* Color de texto naranja en el final de la animación */
+        text-shadow: 0 0 10px #39045c, 0 0 20px #ff9900, 0 0 30px #ff9900, 0 0 40px #ff9900, 0 0 50px #ff9900, 0 0 60px #ff9900; /* Efecto de luces de neón con sombras naranjas */
+    }
+}
+
+
+
+/* Estilos para la sección de contenido */
+/* Estilos para la sección de contenido */
+.contenido {
+    padding: 20px;
+    background-color: transparent; /* Hace que el fondo sea transparente */
+}
+
+/* Estilos para la sección de donar */
+.donar {
+    background-color: transparent;
+    padding: 2px;
+    border-radius: 10px;
+    width: 50%;
+    height: 50%;
+    transform-origin: center;
+    transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out; /* Agrega una transición suave a la propiedad de transformación y al color de fondo */
+}
+
+/* Aplica una animación de desplazamiento y cambio de tamaño al contenedor cuando se realiza un hover */
+.donar:hover {
+    background-color: rgba(92, 6, 6, 0); /* Hace que el fondo sea completamente transparente */
+    transform: scale(1.1) translateY(-10px); /* Cambia el tamaño y desplaza hacia arriba */
+}
+
+
+
+
+/* Estilos para los formularios */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: rgb(228, 216, 216); /* Cambia el color del texto de las etiquetas a blanco */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #9c2525;
+    border-radius: 5px;
+    color: rgb(15, 14, 14); /* Cambia el color del texto de los campos de entrada a blanco */
+}
+
+button[type="submit"] {
+    background-color: #11022c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Cambia el color del texto en las etiquetas h2 y p a blanco */
+/* Cambia el color del texto en las etiquetas h2 y p a blanco y centra el texto */
+h2,
+p {
+    color: white;
+    text-align: center; /* Centra horizontalmente el texto */
+    line-height: 1.5; /* Centra verticalmente el texto (ajusta el valor según sea necesario) */
+}

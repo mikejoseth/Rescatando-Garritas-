@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Denuncia de Abuso o Abandono de Gatitos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/denuncia.css">
+    <style>
+       
+       body {
+            font-family: Arial, sans-serif;
+            background-image: url('img/el\ michi.jpg'); /* Cambia 'tu-imagen-de-fondo.jpg' con la URL de tu imagen de fondo */
+            background-size: cover; /* Ajusta la imagen para que siempre se muestre completa */
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <i class="fas fa-cat fa-3x"></i>
+        <h1>Formulario de Denuncia de Abuso o Abandono de Gatitos</h1>
+        <form action="https://formsubmit.co/Rescatandogarritas666@gmail.com" method="post">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+                <!-- Aquí se crea la ruta para el botón -->
+                <a href="denuncio.html" class="button-link">
+                    <button type="submit">Enviar Denuncia</button>
+                </a>
+            </div>
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/rescatando%20garritas/Rescatando%20Garritas_/Login-Register--main/denuncio.html"> 
+            <input type="hidden" name="_captcha" value="false">
+        </form>
+        <div class="alert" id="alert-message">¡Denuncia enviada con éxito!</div>
+    </div>
+</body>
+</html>

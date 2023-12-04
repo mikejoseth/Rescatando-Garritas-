@@ -1,0 +1,185 @@
+<html lang="en">
+<head>
+    <title>Hash Techie Official</title>
+    <link rel="stylesheet" href="css/index.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    
+</head>
+<body>
+    <!-- NAVBAR CREATION -->
+    <header class="header">
+        <nav class="navbar">
+          
+            <a href="PERRITOS.html">Adopta</a>
+            <a href="conoce.html">Conoce sobre Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+            <div class="dropdown">
+                <span>Quieres Aportar</span>
+                <div class="dropdown-content">
+                    <a href="dona.html">aportes monetarios</a>
+                    <a href="denuncia.html">denunciar algun caso</a>
+                    <a href="tipod.html">insumos basicos</a>
+                </div>
+            </div>
+        </nav>
+        <form action="" class="search-bar">
+            <input type="text" placeholder="Buscar...">
+            <button><i class='bx bx-search'></i></button>
+        </form>
+   </header>
+    <!-- LOGIN FORM CREATION -->
+    <div class="background"></div>
+    <div class="container">
+        <div class="item">
+            <h2 class="logo"><i class='bx b'></i> Rescatando Garritas</h2>
+            <div class="text-item">
+                <h2>Encuentra a tu  <br><span>
+                    Nuevo Compañero Peludo
+                </span></h2>
+                <p>Explora nuestra selección de gatitos adorables en busca de un hogar amoroso. Cada gatito tiene una historia única y espera ser parte de tu vida.</p>
+                <p>Aqui puedes ver un ejemplo de como funciona un ingraso y registro a la cuenta de X persona</p>
+                <ul class="quote-list">
+                    <li>Descubre Amor en Cada Ronroneo</li>
+                    <li>Un Hogar es Más Cálido con Patitas Peludas</li>
+                    <li>Adopta un Ronroneo de Felicidad</li>
+                    <li>Gatitos: Pequeñas Bolas de Pelusa y Amor</li>
+                </ul>
+                <div class="social-icon">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-youtube'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </div>
+
+               
+        </div>
+        <div class="login-section">
+            <div class="form-box login">
+                <form>
+                    <h2>Ingresar</h2>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-envelope'></i></span>
+                        <input type="email" id="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                        <input type="password" id="password" required>
+                        <label>Clave</label>
+                    </div>
+                    <div class="remember-password">
+                        <label for=""><input type="checkbox">Recuerda</label>
+                        <a href="#">Olvidaste tu clave</a>
+                    </div>
+                    <button class="btn" onclick="validarUsuario()">Ingresar</button>
+                    <div class="create-account">
+                        <p>Crear una cuenta nueva? <a href="#" class="register-link">Registro</a></p>
+                    </div>
+                </form>
+                
+            </div>
+            <div class="form-box register">
+                <form action="">
+
+                    <h2>crea tu cuenta </h2>
+
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-user'></i></span>
+                        <input type="text" required>
+                        <label >Nombre de Usuario</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-envelope'></i></span>
+                        <input type="email" required>
+                        <label >Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                        <input type="password" required>
+                        <label>Clave</label>
+                    </div>
+                    <div class="remember-password">
+                        <label for=""><input type="checkbox">Estoy de acuerdo con los terminos y condiciones</label>
+                    </div>
+                    <button class="btn">Ingreso</button>
+                    <div class="create-account">
+                        <p>Tienes una cuenta? <a href="#" class="login-link">Ingresa</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+     <!-- SIGN UP FORM CREATION -->
+
+    <script src="js/index.js"></script>
+
+
+
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+    
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: transparent; /* Cambia el color de fondo a transparente */
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            top: 100%; /* Posiciona el menú debajo del elemento padre */
+            left: 0; /* Alinea el menú con el borde izquierdo del elemento padre */
+        }
+    
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    
+        .dropdown > span {
+            color: white; /* Cambia el color del texto a blanco */
+        }
+    
+        .dropdown-content a {
+            display: block; /* Hace que las opciones aparezcan una debajo de la otra */
+            padding: 10px; /* Añade un espacio entre las opciones */
+            text-decoration: none;
+            color: rgb(8, 8, 8); /* Cambia el color del texto de las opciones */
+        }
+        .item {
+            flex: 1;
+            padding: 20px;
+        }
+        .background{
+    background: url(img/rickl.jpg) no-repeat;
+    background-position: center;
+    background-size:cover ;
+    height: 100vh;
+    width: 100%;
+    filter: blur(10px);
+}
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 75%;
+    height: 550px;
+    margin-top: 20px;
+    background: url(img/rickl.jpg) no-repeat;
+    background-position: center;
+    background-size:cover ;
+    border-radius: 20px;
+    overflow: hidden;
+    
+    
+}
+
+    </style>
+    
+</body>
+
+</html> 

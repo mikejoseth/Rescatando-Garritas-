@@ -1,0 +1,68 @@
+/* Agrega estilos CSS personalizados aquí */
+
+
+.animated-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(249, 249, 249, 0.8); /* Fondo semitransparente */
+    transition: transform 0.3s ease-in-out;
+}
+
+.animated-container:hover {
+    transform: scale(1.05); /* Aumenta el tamaño al 105% */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(249, 249, 249, 0.8); /* Fondo semitransparente */
+}
+
+h2 {
+    color: #333;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0 0 0 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Estilos específicos para algunas secciones */
+#por-que-adoptar {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+}
+
+#por-que-adoptar p {
+    font-style: italic;
+}
+
+#proceso-adopcion ol {
+    list-style-type: decimal;
+}

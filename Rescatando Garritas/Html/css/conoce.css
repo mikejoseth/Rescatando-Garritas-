@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/michi.jpg'); /* Reemplaza 'img/michi.jpg' con la URL o la ruta local de tu imagen de fondo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para hacer que el texto sea legible en la imagen de fondo */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+h1,
+h2,
+p,
+a {
+    color: #fff; /* Cambia el color de todos los textos y títulos a blanco */
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+    animation: zoomIn 1s forwards;
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0); /* Fondo blanco completamente transparente */
+    box-shadow: 0 0 10px rgba(48, 47, 47, 0.1);
+    animation: fadeIn 1s forwards;
+}
+
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+img {
+    display: inline-block; /* Muestra las imágenes en línea una al lado de la otra */
+    margin: 0 10px; /* Agrega un margen de 10px entre las imágenes */
+    max-width: 25%;
+    height: auto;
+    border: 5px solid #333;
+    border-radius: 10px;
+    animation: zoomIn 1s forwards;
+}
+
+
+ul,
+ol {
+    margin: 0;
+    padding-left: 20px;
+    color: #fff; /* Cambia el color del texto de las listas a blanco */
+}
+
+p {
+    font-size: 18px;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.zoomable-text {
+    cursor: pointer;
+    transition: font-size 0.5s ease-in-out;
+}
+
+.zoomable-text:hover {
+    font-size: 20px;
+}

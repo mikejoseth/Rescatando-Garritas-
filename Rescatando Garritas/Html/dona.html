@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Donación</title>
+    <link rel="stylesheet" href="css/dona.css">
+</head>
+<body>
+    <header>
+        <h1 class="neon-text">Cada aporte es importante</h1>
+    </header>
+
+    <section class="contenido">
+        
+    </section>
+
+    <section class="donar">
+        <h2>¡Ayúdanos a ayudar a los gatitos!</h2>
+        <p>Tu generosa donación nos permite cuidar y encontrar hogares
+            amorosos para los gatitos necesitados.</p>
+        
+        <!-- Formulario de Donación -->
+        <form action="gracias.html" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <label for="monto">Monto de la donación:</label>
+            <input type="number" id="monto" name="monto" required>
+
+            <label for="tarjeta">Número de tarjeta de crédito:</label>
+            <input type="text" id="tarjeta" name="tarjeta" required>
+
+            <label for="expira">Fecha de expiración (MM/AA):</label>
+            <input type="text" id="expira" name="expira" required>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required>
+
+            <button type="submit">Donar</button>
+        </form>
+    </section>
+
+ <style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/nuevo\ f.jpg'); /* Ruta de tu imagen de fondo */
+    background-size: cover; /* Ajusta la imagen al tamaño de la pantalla */
+    background-attachment: fixed; /* Fija la imagen de fondo en su lugar */
+}
+
+
+</style>
+    
+</body>
+</html>

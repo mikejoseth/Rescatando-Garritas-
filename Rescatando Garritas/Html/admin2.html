@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/admin2.css">
+    <title>Administrador nuevos de Michis</title>
+</head>
+<body>
+    <h1>listado de michis</h1>
+    <div id="adopted-cats"></div>
+    
+    <h1>Agregar Nuevo Michi</h1>
+    <form id="add-cat-form">
+        <label for="cat-name">Nombre del Michi:</label>
+        <input type="text" id="cat-name" required>
+        
+        <label for="cat-description">Descripción:</label>
+        <textarea id="cat-description" required></textarea>
+
+        <label for="cat-image">Imagen del Michi:</label>
+        <input type="file" id="cat-image" accept="img/*" required>
+        
+        <button type="submit">Agregar</button>
+    </form>
+    
+    <script src="js/admin2.js"></script>
+     <style>
+        body {
+     font-family: Arial, sans-serif;
+     text-align: center;
+     margin: 20px;
+     background-color: #f0f0f0;
+     animation: fadeIn 1s;
+     background-image: url('img/rename.jpg');
+     background-size: cover;
+     background-attachment: fixed;
+     }
+     </style>
+</body>
+</html>
+

@@ -1,0 +1,119 @@
+/* Encabezado */
+header {
+    background-color: #0f0f0f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Animación de desvanecimiento */
+/* Animación de zoom */
+@keyframes zoom-in {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Contenedor principal */
+main {
+    max-width: 800px;
+    margin: 20px; /* Márgenes iguales en todos los lados */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    animation: zoom-in 1s, fade-in 1s; /* Aplicar animación de zoom y de desvanecimiento */
+}
+
+
+
+/* Formulario de Contacto */
+#formulario {
+    margin-bottom: 20px;
+}
+
+#formulario form {
+    display: flex;
+    flex-direction: column;
+}
+
+#formulario label {
+    margin-bottom: 10px;
+}
+
+#formulario input[type="text"],
+#formulario input[type="email"] {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    resize: vertical;
+    width: 40%; /* Cambia el ancho de las cajas de texto */
+}
+
+#formulario textarea {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    resize: vertical;
+    width: 40%; /* Cambia el ancho del área de texto */
+}
+
+#formulario button {
+    background-color: #14146e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 20px;
+    width: 20%
+}
+
+#formulario button:hover {
+    background-color: #555;
+}
+
+/* Información de Contacto */
+#informacion-contacto {
+    margin-bottom: 20px;
+}
+
+/* Redes Sociales */
+#redes-sociales ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+#redes-sociales li {
+    margin-right: 10px;
+}
+
+#redes-sociales a {
+    text-decoration: none;
+    color: #050505;
+    font-size: 24px;
+}
+
+/* Preguntas Frecuentes */
+#preguntas-frecuentes ul {
+    list-style: none;
+    padding: 0;
+}
+
+#preguntas-frecuentes li {
+    margin-bottom: 10px;
+}
+
+/* Contenido dentro del contenedor principal */
+main p {
+    margin: 0;
+}
+
